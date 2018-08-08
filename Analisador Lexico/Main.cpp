@@ -1,6 +1,4 @@
 #include <iostream>
-#include "Tokens.cpp"
-#include "Token.cpp"
 #include "LexicalAnalyzer.cpp"
 
 

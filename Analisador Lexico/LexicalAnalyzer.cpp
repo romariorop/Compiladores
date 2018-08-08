@@ -1,8 +1,11 @@
 #include <map>
+#include <iostream>
 #include <vector>
 #include <deque>
 #include <regex>
 #include<fstream>
+#include "Tokens.cpp"
+#include "Token.cpp"
 class LexicalAnalyzer{
 private:
 	std::map<std::string, TokenType>tokensMap;
@@ -86,8 +89,8 @@ bool LexicalAnalyzer::hasToken(){
 		column = 0;
 		index = 0;
 		if(getline(infile, nextLine)){
+			std::cout << "Line " << line+1 << " :" << nextLine << std::endl; 
 			if(!nextLine.size()){
-				std::cout << "Line " << line << " :" << nextLine << std::endl; 
 				return hasToken();
 			}
 			return true;
