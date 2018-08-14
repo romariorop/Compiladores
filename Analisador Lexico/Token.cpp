@@ -8,22 +8,15 @@ public:
 	int line;
 	int column;
 	std::string value;
-	void print(std::map<int , std::string>enumToString);
 	std::string getString(TokenType t, std::map<int , std::string>enumToString);
 	
 };
-
-
 
 Token::Token(TokenType type, int line, int column, std::string value){
 	this->type = type;
 	this->line = line;
 	this->column = column;
 	this->value = value;
-}
-
-void Token::print(std::map<int , std::string>enumToString){
-	printf("[%04d, %04d] (%04d, %10s) {%s}\n", line + 1, column + 1, this->type , getString(this->type, enumToString).c_str() , value.c_str());
 }
 
 std::string Token::getString(TokenType t, std::map<int , std::string>enumToString){

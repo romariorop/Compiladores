@@ -26,12 +26,12 @@ void shellSort[]{
 void main[]{
     int i ;
     scan[n] ;
-    for[i = 0; i < n; i++]{
+    for[i ; 0; n]{
     	scan[vetor(i)] ;
     } 
     shellSort[];
     for[i = 0; i < n; i++]{
     	print[vetor(i)] ;
-        print[" ] ;
+        print[" "] ;
     }
 }

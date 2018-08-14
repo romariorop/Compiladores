@@ -86,10 +86,16 @@ void LexicalAnalyzer::init(std::string programName){
 bool LexicalAnalyzer::hasToken(){
 	if(index == (int)nextLine.size() || nextLine.empty()){
 		++line;
+		int pos = 0;
 		column = 0;
 		index = 0;
 		if(getline(infile, nextLine)){
-			std::cout << "Line " << line+1 << " :" << nextLine << std::endl; 
+			while(nextLine[pos] == ' ' || nextLine[pos] == '\t')++pos;
+			while(pos < (int)nextLine.size()){
+				std::cout << nextLine[pos];
+				++pos;
+			}
+			std:: cout << "\n";
 			if(!nextLine.size()){
 				return hasToken();
 			}
