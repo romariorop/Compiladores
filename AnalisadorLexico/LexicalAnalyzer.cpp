@@ -36,6 +36,7 @@ LexicalAnalyzer::~LexicalAnalyzer(){
 void LexicalAnalyzer::init(std::string programName){
 	infile.open(programName);
 	index = 0;
+	tokensMap["fun"] = TokenType::funDec;
 	tokensMap[","] = TokenType::comma;
 	tokensMap[";"] = TokenType::semiColon;
 	tokensMap["main"] = TokenType::reMain;
@@ -81,6 +82,7 @@ void LexicalAnalyzer::init(std::string programName){
 	tokensMap[">"] = TokenType::greRel;
 	tokensMap["void"] = TokenType::reVoid;
 	tokensMap["="] = TokenType::atrib;
+	tokensMap["return"] = TokenType::reReturn;
 }
 
 bool LexicalAnalyzer::hasToken(){

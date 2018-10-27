@@ -1,0 +1,4 @@
+fun void main[] {
+    string message = "alo mundo" ;
+    print[message] ;
+}

@@ -1,9 +1,11 @@
+#pragma once
 #include <map>
 class Token{
 private:
 	
 public:
 	Token(TokenType type, int line, int column, std::string value);
+	Token();
 	TokenType type;
 	int line;
 	int column;
@@ -19,9 +21,14 @@ Token::Token(TokenType type, int line, int column, std::string value){
 	this->value = value;
 }
 
+Token::Token(){
+	this->type = TokenType::unknown;
+}
+
 std::string Token::getString(TokenType t, std::map<int , std::string>enumToString){
 	if(enumToString.empty()){
 		enumToString[comma] = "comma";
+		enumToString[funDec] = "funDec";
 		enumToString[semiColon] = "semiColon";
 		enumToString[headerCons] = "headerCons";
 		enumToString[headerName] = "headerName";
@@ -71,10 +78,7 @@ std::string Token::getString(TokenType t, std::map<int , std::string>enumToStrin
 		enumToString[reVoid] = "reVoid";
 		enumToString[atrib] = "atrib";
 		enumToString[stringCons] = "stringCons";
-
-
+		enumToString[reReturn] = "reReturn";
 	}
-	if(enumToString.count(t)){
-		return enumToString[t];		
-	}else return "unknown";
+	
 }

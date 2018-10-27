@@ -1,0 +1,873 @@
+int vetor(100);
+          S = Decl S
+          Decl = Type LI
+          Type = intType
+        [0001, 0001] (0006,    intType) {int}
+          LI = 'id' ArrayOpt Inst LIr
+        [0001, 0005] (0047,         id) {vetor}
+          ArrayOpt = '(' ArrayAccess
+        [0001, 0010] (0035,    openPar) {(}
+          ArrayAccess = 'intConst' ')' 
+        [0001, 0011] (0007,   intConst) {100}
+        [0001, 0014] (0036,   closePar) {)}
+          Inst = epsilon
+          LIr = ';'
+        [0001, 0015] (0002,  semiColon) {;}
+int n;
+          S = Decl S
+          Decl = Type LI
+          Type = intType
+        [0002, 0001] (0006,    intType) {int}
+          LI = 'id' ArrayOpt Inst LIr
+        [0002, 0005] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Inst = epsilon
+          LIr = ';'
+        [0002, 0006] (0002,  semiColon) {;}
+
+fun void shellSort[]{
+          S = funDec Type FunName '[' Params ']' Body S
+        [0004, 0001] (0000,     funDec) {fun}
+          Type = reVoid
+        [0004, 0005] (0049,     reVoid) {void}
+          FunName = 'id'
+        [0004, 0010] (0047,         id) {shellSort}
+        [0004, 0019] (0033,  openBrack) {[}
+          Params = epsilon
+        [0004, 0020] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0004, 0021] (0037,  openBrace) {{}
+int h = 1 ;
+          BodyScope = Decl BodyScope
+          Decl = Type LI
+          Type = intType
+        [0005, 0002] (0006,    intType) {int}
+          LI = 'id' ArrayOpt Inst LIr
+        [0005, 0006] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Inst = 'atrib' Inr
+        [0005, 0008] (0050,      atrib) {=}
+          Inr = Fc
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = Far
+          Far = 'intConst'
+        [0005, 0010] (0007,   intConst) {1}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          LIr = ';'
+        [0005, 0012] (0002,  semiColon) {;}
+while[h < n]{
+          BodyScope = Command BodyScope
+          Command = 'reWhile' '[' Eb ']' Body
+        [0006, 0005] (0043,    reWhile) {while}
+        [0006, 0010] (0033,  openBrack) {[}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0006, 0011] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0006, 0013] (0028,     lowRel) {<}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0006, 0015] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0006, 0016] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0006, 0017] (0037,  openBrace) {{}
+h = h * 3 + 1 ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0007, 0006] (0047,         id) {h}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0007, 0008] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0007, 0010] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = 'multOp' Fa Tar
+        [0007, 0012] (0016,     multOp) {*}
+          Fa = Far
+          Far = 'intConst'
+        [0007, 0014] (0007,   intConst) {3}
+          Tar = epsilon
+          Ear = 'addOp' Ta Ear
+        [0007, 0016] (0014,      addOp) {+}
+          Ta = Fa Tar
+          Fa = Far
+          Far = 'intConst'
+        [0007, 0018] (0007,   intConst) {1}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0007, 0020] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0008, 0005] (0038, closeBrace) {}}
+h = h/3 ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0009, 0005] (0047,         id) {h}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0009, 0007] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0009, 0009] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = 'divOp' Fa Tar
+        [0009, 0010] (0017,      divOp) {/}
+          Fa = Far
+          Far = 'intConst'
+        [0009, 0011] (0007,   intConst) {3}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0009, 0013] (0002,  semiColon) {;}
+int temp, j, k;
+          BodyScope = Decl BodyScope
+          Decl = Type LI
+          Type = intType
+        [0010, 0005] (0006,    intType) {int}
+          LI = 'id' ArrayOpt Inst LIr
+        [0010, 0009] (0047,         id) {temp}
+          ArrayOpt = epsilon
+          Inst = epsilon
+          LIr = ',' 'id' ArrayOpt Inst LIr
+        [0010, 0013] (0001,      comma) {,}
+        [0010, 0015] (0047,         id) {j}
+          ArrayOpt = epsilon
+          Inst = epsilon
+          LIr = ',' 'id' ArrayOpt Inst LIr
+        [0010, 0016] (0001,      comma) {,}
+        [0010, 0018] (0047,         id) {k}
+          ArrayOpt = epsilon
+          Inst = epsilon
+          LIr = ';'
+        [0010, 0019] (0002,  semiColon) {;}
+while[h > 0]{
+          BodyScope = Command BodyScope
+          Command = 'reWhile' '[' Eb ']' Body
+        [0011, 0005] (0043,    reWhile) {while}
+        [0011, 0010] (0033,  openBrack) {[}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0011, 0011] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0011, 0013] (0048,     greRel) {>}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = Far
+          Far = 'intConst'
+        [0011, 0015] (0007,   intConst) {0}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0011, 0016] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0011, 0017] (0037,  openBrace) {{}
+for[i = h; i < n; 1]{
+          BodyScope = Command BodyScope
+          Command = 'reFor' '[' 'id' ';' 'Eb' ';' Inc ']' Body
+        [0012, 0006] (0042,      reFor) {for}
+        [0012, 0009] (0033,  openBrack) {[}
+          Atr = 'id' AtrR
+        [0012, 0010] (0047,         id) {i}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0012, 0012] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0012, 0014] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0012, 0015] (0002,  semiColon) {;}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0012, 0017] (0047,         id) {i}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0012, 0019] (0028,     lowRel) {<}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0012, 0021] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0012, 0022] (0002,  semiColon) {;}
+          Inc = 'intConst'
+        [0012, 0024] (0007,   intConst) {1}
+        [0012, 0025] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0012, 0026] (0037,  openBrace) {{}
+temp = a(i) ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0013, 0010] (0047,         id) {temp}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0013, 0015] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0013, 0017] (0047,         id) {a}
+          ArrayOpt = '(' ArrayAccess
+        [0013, 0018] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0013, 0019] (0047,         id) {i}
+        [0013, 0020] (0036,   closePar) {)}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0013, 0022] (0002,  semiColon) {;}
+j = i ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0014, 0013] (0047,         id) {j}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0014, 0015] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0014, 0017] (0047,         id) {i}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0014, 0019] (0002,  semiColon) {;}
+j = j - h;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0015, 0013] (0047,         id) {j}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0015, 0015] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0015, 0017] (0047,         id) {j}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = 'subOp' Ta Ear
+        [0015, 0019] (0015,      subOp) {-}
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0015, 0021] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0015, 0022] (0002,  semiColon) {;}
+while[j >= h && a(j) > temp]{
+          BodyScope = Command BodyScope
+          Command = 'reWhile' '[' Eb ']' Body
+        [0016, 0013] (0043,    reWhile) {while}
+        [0016, 0018] (0033,  openBrack) {[}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0016, 0019] (0047,         id) {j}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0016, 0021] (0026,   greEqRel) {>=}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0016, 0024] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = 'andOpLog' Fb Tbr
+        [0016, 0026] (0018,   andOpLog) {&&}
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0016, 0029] (0047,         id) {a}
+          ArrayOpt = '(' ArrayAccess
+        [0016, 0030] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0016, 0031] (0047,         id) {j}
+        [0016, 0032] (0036,   closePar) {)}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0016, 0034] (0048,     greRel) {>}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0016, 0036] (0047,         id) {temp}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0016, 0040] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0016, 0041] (0037,  openBrace) {{}
+k = j - h;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0017, 0017] (0047,         id) {k}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0017, 0019] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0017, 0021] (0047,         id) {j}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = 'subOp' Ta Ear
+        [0017, 0023] (0015,      subOp) {-}
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0017, 0025] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0017, 0026] (0002,  semiColon) {;}
+a(j) = a(k) ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0018, 0014] (0047,         id) {a}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = '(' ArrayAccess
+        [0018, 0015] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0018, 0016] (0047,         id) {j}
+        [0018, 0017] (0036,   closePar) {)}
+        [0018, 0019] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0018, 0021] (0047,         id) {a}
+          ArrayOpt = '(' ArrayAccess
+        [0018, 0022] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0018, 0023] (0047,         id) {k}
+        [0018, 0024] (0036,   closePar) {)}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0018, 0026] (0002,  semiColon) {;}
+j = j - h ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0019, 0017] (0047,         id) {j}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0019, 0019] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0019, 0021] (0047,         id) {j}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = 'subOp' Ta Ear
+        [0019, 0023] (0015,      subOp) {-}
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0019, 0025] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0019, 0027] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0020, 0013] (0038, closeBrace) {}}
+a(j) = temp ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0021, 0013] (0047,         id) {a}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = '(' ArrayAccess
+        [0021, 0014] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0021, 0015] (0047,         id) {j}
+        [0021, 0016] (0036,   closePar) {)}
+        [0021, 0018] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0021, 0020] (0047,         id) {temp}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0021, 0025] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0022, 0009] (0038, closeBrace) {}}
+h = h / 2 ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0023, 0009] (0047,         id) {h}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0023, 0011] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0023, 0013] (0047,         id) {h}
+          ArrayOpt = epsilon
+          Tar = 'divOp' Fa Tar
+        [0023, 0015] (0017,      divOp) {/}
+          Fa = Far
+          Far = 'intConst'
+        [0023, 0017] (0007,   intConst) {2}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0023, 0019] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0024, 0005] (0038, closeBrace) {}}
+
+}
+          BodyScope = epsilon
+        [0026, 0001] (0038, closeBrace) {}}
+
+fun void main[]{
+          S = funDec Type FunName '[' Params ']' Body S
+        [0028, 0001] (0000,     funDec) {fun}
+          Type = reVoid
+        [0028, 0005] (0049,     reVoid) {void}
+          FunName = ReMain
+        [0028, 0010] (0005,     reMain) {main}
+        [0028, 0014] (0033,  openBrack) {[}
+          Params = epsilon
+        [0028, 0015] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0028, 0016] (0037,  openBrace) {{}
+int i ;
+          BodyScope = Decl BodyScope
+          Decl = Type LI
+          Type = intType
+        [0029, 0005] (0006,    intType) {int}
+          LI = 'id' ArrayOpt Inst LIr
+        [0029, 0009] (0047,         id) {i}
+          ArrayOpt = epsilon
+          Inst = epsilon
+          LIr = ';'
+        [0029, 0011] (0002,  semiColon) {;}
+scan[n] ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0030, 0005] (0047,         id) {scan}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0030, 0009] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0030, 0010] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          Lecr = epsilon
+        [0030, 0011] (0034, closeBrack) {]}
+        [0030, 0013] (0002,  semiColon) {;}
+for[i = 0; i < n; 1]{
+          BodyScope = Command BodyScope
+          Command = 'reFor' '[' 'id' ';' 'Eb' ';' Inc ']' Body
+        [0031, 0005] (0042,      reFor) {for}
+        [0031, 0008] (0033,  openBrack) {[}
+          Atr = 'id' AtrR
+        [0031, 0009] (0047,         id) {i}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0031, 0011] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = Far
+          Far = 'intConst'
+        [0031, 0013] (0007,   intConst) {0}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0031, 0014] (0002,  semiColon) {;}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0031, 0016] (0047,         id) {i}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0031, 0018] (0028,     lowRel) {<}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0031, 0020] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0031, 0021] (0002,  semiColon) {;}
+          Inc = 'intConst'
+        [0031, 0023] (0007,   intConst) {1}
+        [0031, 0024] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0031, 0025] (0037,  openBrace) {{}
+scan[vetor(i)] ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0032, 0006] (0047,         id) {scan}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0032, 0010] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0032, 0011] (0047,         id) {vetor}
+          ArrayOpt = '(' ArrayAccess
+        [0032, 0016] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0032, 0017] (0047,         id) {i}
+        [0032, 0018] (0036,   closePar) {)}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          Lecr = epsilon
+        [0032, 0019] (0034, closeBrack) {]}
+        [0032, 0021] (0002,  semiColon) {;}
+} 
+          BodyScope = epsilon
+        [0033, 0005] (0038, closeBrace) {}}
+shellSort[];
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0034, 0005] (0047,         id) {shellSort}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0034, 0014] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = Far
+          Far = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          Lecr = epsilon
+        [0034, 0015] (0034, closeBrack) {]}
+        [0034, 0016] (0002,  semiColon) {;}
+for[i = 0; i < n; 1]{
+          BodyScope = Command BodyScope
+          Command = 'reFor' '[' 'id' ';' 'Eb' ';' Inc ']' Body
+        [0035, 0005] (0042,      reFor) {for}
+        [0035, 0008] (0033,  openBrack) {[}
+          Atr = 'id' AtrR
+        [0035, 0009] (0047,         id) {i}
+          Atr = ArrayOpt 'atrib' Fc ';'
+          ArrayOpt = epsilon
+        [0035, 0011] (0050,      atrib) {=}
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = Far
+          Far = 'intConst'
+        [0035, 0013] (0007,   intConst) {0}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0035, 0014] (0002,  semiColon) {;}
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0035, 0016] (0047,         id) {i}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = Comp Ra Fbr
+        [0035, 0018] (0028,     lowRel) {<}
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0035, 0020] (0047,         id) {n}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+        [0035, 0021] (0002,  semiColon) {;}
+          Inc = 'intConst'
+        [0035, 0023] (0007,   intConst) {1}
+        [0035, 0024] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0035, 0025] (0037,  openBrace) {{}
+print[vetor(i)] ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0036, 0006] (0047,         id) {print}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0036, 0011] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0036, 0012] (0047,         id) {vetor}
+          ArrayOpt = '(' ArrayAccess
+        [0036, 0017] (0035,    openPar) {(}
+          ArrayAccess = 'id' ')' 
+        [0036, 0018] (0047,         id) {i}
+        [0036, 0019] (0036,   closePar) {)}
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          Lecr = epsilon
+        [0036, 0020] (0034, closeBrack) {]}
+        [0036, 0022] (0002,  semiColon) {;}
+print[" "] ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0037, 0009] (0047,         id) {print}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0037, 0014] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = StringConst
+        [0037, 0015] (0013, stringCons) { }
+          Lecr = epsilon
+        [0037, 0018] (0034, closeBrack) {]}
+        [0037, 0020] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0038, 0005] (0038, closeBrace) {}}
+}
+          BodyScope = epsilon
+        [0039, 0001] (0038, closeBrace) {}}
+          S = epsilon

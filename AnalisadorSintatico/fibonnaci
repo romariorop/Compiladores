@@ -1,0 +1,15 @@
+fun void main[] {
+	int n ;
+    scan[n] ;
+    int left = 0 ;
+    int right = 1;
+    if[n > 0]{
+    	print[left];
+    }
+    if[n > 1]{
+    	print[right];
+    }
+    while[n > 2] {
+    	n--;
+    }
+}

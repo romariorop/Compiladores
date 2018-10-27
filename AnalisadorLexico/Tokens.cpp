@@ -1,4 +1,6 @@
+#pragma once
 enum TokenType{
+	funDec,
 	comma,
 	semiColon,
 	headerCons,
@@ -49,5 +51,6 @@ enum TokenType{
 	greRel,
 	reVoid,
 	atrib,
+	reReturn,
 	unknown
 };

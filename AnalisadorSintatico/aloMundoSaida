@@ -1,0 +1,58 @@
+fun void main[] {
+          S = funDec Type FunName '[' Params ']' Body S
+        [0001, 0001] (0000,     funDec) {fun}
+          Type = reVoid
+        [0001, 0005] (0049,     reVoid) {void}
+          FunName = ReMain
+        [0001, 0010] (0005,     reMain) {main}
+        [0001, 0014] (0033,  openBrack) {[}
+          Params = epsilon
+        [0001, 0015] (0034, closeBrack) {]}
+          Body = '{' BodyScope '}' 
+        [0001, 0017] (0037,  openBrace) {{}
+string message = "alo mundo" ;
+          BodyScope = Decl BodyScope
+          Decl = Type LI
+          Type = stringType
+        [0002, 0005] (0012, stringType) {string}
+          LI = 'id' ArrayOpt Inst LIr
+        [0002, 0012] (0047,         id) {message}
+          ArrayOpt = epsilon
+          Inst = 'atrib' Inr
+        [0002, 0020] (0050,      atrib) {=}
+          Inr = Fc
+          Fc = StringConst
+        [0002, 0022] (0013, stringCons) {alo mundo}
+          LIr = ';'
+        [0002, 0034] (0002,  semiColon) {;}
+print[message] ;
+          BodyScope = Atr BodyScope
+          Atr = 'id' AtrR
+        [0003, 0005] (0047,         id) {print}
+          Atr = FunCall
+          FunCall = '[' Lec ']' ;
+        [0003, 0010] (0033,  openBrack) {[}
+          Lec = Fc Lecr
+          Fc = Eb
+          Eb = Tb Ebr
+          Tb = Fb Tbr
+          Fb = Ra Fbr
+          Ra = Ea Rar
+          Ea = Ta Ear
+          Ta = Fa Tar
+          Fa = 'id' arrayOpt
+        [0003, 0011] (0047,         id) {message}
+          ArrayOpt = epsilon
+          Tar = epsilon
+          Ear = epsilon
+          Rar = Epsilon
+          Fbr = epsilon
+          Tbr = epsilon
+          Ebr = epsilon
+          Lecr = epsilon
+        [0003, 0018] (0034, closeBrack) {]}
+        [0003, 0020] (0002,  semiColon) {;}
+}
+          BodyScope = epsilon
+        [0004, 0001] (0038, closeBrace) {}}
+          S = epsilon
