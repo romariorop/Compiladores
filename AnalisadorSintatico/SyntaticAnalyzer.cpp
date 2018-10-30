@@ -134,7 +134,7 @@ void SyntaticAnalyzer::nextToken(){
 }
 
 void SyntaticAnalyzer::print(Token t){
-	printf("        [%04d, %04d] (%04d, %10s) {%s}\n", t.line + 1, t.column + 1, t.type , getTokenName(t.type).c_str() , t.value.c_str());
+	printf("              [%04d, %04d] (%04d, %10s) {%s}\n", t.line + 1, t.column + 1, t.type , getTokenName(t.type).c_str() , t.value.c_str());
     nextToken();
 }
 
