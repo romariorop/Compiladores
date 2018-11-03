@@ -197,12 +197,10 @@ void SyntaticAnalyzer::BodyScope() {
 
 void SyntaticAnalyzer::Command(){
     if(token.type == TokenType::reFor){
-        printProduction("Command", "'reFor' '[' 'id' ';' 'Eb' ';' Inc ']' Body");
+        printProduction("Command", "'reFor' '[' Atr ';' 'Eb' ';' Inc ']' Body");
         print(token);
         verifyTokenAndPrint(TokenType::openBrack);
-        //verifyTokenAndPrint(TokenType::id);
         Atr();
-        //verifyTokenAndPrint(TokenType::semiColon);
         Eb();
         verifyTokenAndPrint(TokenType::semiColon);
         Inc();
