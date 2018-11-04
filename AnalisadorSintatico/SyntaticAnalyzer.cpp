@@ -4,6 +4,9 @@
 #include <map>
 #include <string>
 #include <cstdio>
+
+// analisador descendente LL(1) preditivo recursivo; 
+
 class SyntaticAnalyzer {
 private:
     
