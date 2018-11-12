@@ -1,4 +1,4 @@
-0001  int vetor(100);
+   1  int vetor(100);
           S = Decl S
           Decl = Type LI
           Type = intType
@@ -13,7 +13,7 @@
           Inst = epsilon
           LIr = ';'
               [0001, 0015] (0002,  semiColon) {;}
-0002  int n;
+   2  int n;
           S = Decl S
           Decl = Type LI
           Type = intType
@@ -25,7 +25,7 @@
           LIr = ';'
               [0002, 0006] (0002,  semiColon) {;}
 
-0004  fun void shellSort[]{
+   4  fun void shellSort[]{
           S = funDec Type FunName '[' Params ']' Body S
               [0004, 0001] (0000,     funDec) {fun}
           Type = reVoid
@@ -37,7 +37,7 @@
               [0004, 0020] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0004, 0021] (0037,  openBrace) {{}
-0005  int h = 1 ;
+   5  int h = 1 ;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -66,7 +66,7 @@
           Ebr = epsilon
           LIr = ';'
               [0005, 0012] (0002,  semiColon) {;}
-0006  while[h < n]{
+   6  while[h < n]{
           BodyScope = Command BodyScope
           Command = 'reWhile' '[' Eb ']' Body
               [0006, 0005] (0043,    reWhile) {while}
@@ -100,7 +100,7 @@
               [0006, 0016] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0006, 0017] (0037,  openBrace) {{}
-0007  h = h * 3 + 1 ;
+   7  h = h * 3 + 1 ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0007, 0006] (0047,         id) {h}
@@ -136,10 +136,10 @@
           Tbr = epsilon
           Ebr = epsilon
               [0007, 0020] (0002,  semiColon) {;}
-0008  }
+   8  }
           BodyScope = epsilon
               [0008, 0005] (0038, closeBrace) {}}
-0009  h = h/3 ;
+   9  h = h/3 ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0009, 0005] (0047,         id) {h}
@@ -168,7 +168,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0009, 0013] (0002,  semiColon) {;}
-0010  int temp, j, k;
+  10  int temp, j, k;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -189,7 +189,7 @@
           Inst = epsilon
           LIr = ';'
               [0010, 0019] (0002,  semiColon) {;}
-0011  while[h > 0]{
+  11  while[h > 0]{
           BodyScope = Command BodyScope
           Command = 'reWhile' '[' Eb ']' Body
               [0011, 0005] (0043,    reWhile) {while}
@@ -223,7 +223,7 @@
               [0011, 0016] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0011, 0017] (0037,  openBrace) {{}
-0012  for[i = h; i < n; 1]{
+  12  for[i = h; i < n; 1]{
           BodyScope = Command BodyScope
           Command = 'reFor' '[' Atr ';' 'Eb' ';' Inc ']' Body
               [0012, 0006] (0042,      reFor) {for}
@@ -282,7 +282,7 @@
               [0012, 0025] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0012, 0026] (0037,  openBrace) {{}
-0013  temp = a(i) ;
+  13  temp = a(i) ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0013, 0010] (0047,         id) {temp}
@@ -310,7 +310,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0013, 0022] (0002,  semiColon) {;}
-0014  j = i ;
+  14  j = i ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0014, 0013] (0047,         id) {j}
@@ -334,7 +334,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0014, 0019] (0002,  semiColon) {;}
-0015  j = j - h;
+  15  j = j - h;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0015, 0013] (0047,         id) {j}
@@ -365,7 +365,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0015, 0022] (0002,  semiColon) {;}
-0016  while[j >= h && a(j) > temp]{
+  16  while[j >= h && a(j) > temp]{
           BodyScope = Command BodyScope
           Command = 'reWhile' '[' Eb ']' Body
               [0016, 0013] (0043,    reWhile) {while}
@@ -427,7 +427,7 @@
               [0016, 0040] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0016, 0041] (0037,  openBrace) {{}
-0017  k = j - h;
+  17  k = j - h;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0017, 0017] (0047,         id) {k}
@@ -458,7 +458,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0017, 0026] (0002,  semiColon) {;}
-0018  a(j) = a(k) ;
+  18  a(j) = a(k) ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0018, 0014] (0047,         id) {a}
@@ -490,7 +490,7 @@
           Tbr = epsilon
           Ebr = epsilon
               [0018, 0026] (0002,  semiColon) {;}
-0019  j = j - h ;
+  19  j = j - h ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0019, 0017] (0047,         id) {j}
@@ -521,10 +521,10 @@
           Tbr = epsilon
           Ebr = epsilon
               [0019, 0027] (0002,  semiColon) {;}
-0020  }
+  20  }
           BodyScope = epsilon
               [0020, 0013] (0038, closeBrace) {}}
-0021  a(j) = temp ;
+  21  a(j) = temp ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0021, 0013] (0047,         id) {a}
@@ -552,10 +552,10 @@
           Tbr = epsilon
           Ebr = epsilon
               [0021, 0025] (0002,  semiColon) {;}
-0022  }
+  22  }
           BodyScope = epsilon
               [0022, 0009] (0038, closeBrace) {}}
-0023  h = h / 2 ;
+  23  h = h / 2 ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0023, 0009] (0047,         id) {h}
@@ -584,15 +584,15 @@
           Tbr = epsilon
           Ebr = epsilon
               [0023, 0019] (0002,  semiColon) {;}
-0024  }
+  24  }
           BodyScope = epsilon
               [0024, 0005] (0038, closeBrace) {}}
 
-0026  }
+  26  }
           BodyScope = epsilon
               [0026, 0001] (0038, closeBrace) {}}
 
-0028  fun void main[]{
+  28  fun void main[]{
           S = funDec Type FunName '[' Params ']' Body S
               [0028, 0001] (0000,     funDec) {fun}
           Type = reVoid
@@ -604,7 +604,7 @@
               [0028, 0015] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0028, 0016] (0037,  openBrace) {{}
-0029  int i ;
+  29  int i ;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -615,7 +615,7 @@
           Inst = epsilon
           LIr = ';'
               [0029, 0011] (0002,  semiColon) {;}
-0030  scan[n] ;
+  30  scan[n] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0030, 0005] (0047,         id) {scan}
@@ -642,7 +642,7 @@
           Lecr = epsilon
               [0030, 0011] (0034, closeBrack) {]}
               [0030, 0013] (0002,  semiColon) {;}
-0031  for[i = 0; i < n; 1]{
+  31  for[i = 0; i < n; 1]{
           BodyScope = Command BodyScope
           Command = 'reFor' '[' Atr ';' 'Eb' ';' Inc ']' Body
               [0031, 0005] (0042,      reFor) {for}
@@ -701,7 +701,7 @@
               [0031, 0024] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0031, 0025] (0037,  openBrace) {{}
-0032  scan[vetor(i)] ;
+  32  scan[vetor(i)] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0032, 0006] (0047,         id) {scan}
@@ -732,10 +732,10 @@
           Lecr = epsilon
               [0032, 0019] (0034, closeBrack) {]}
               [0032, 0021] (0002,  semiColon) {;}
-0033  } 
+  33  } 
           BodyScope = epsilon
               [0033, 0005] (0038, closeBrace) {}}
-0034  shellSort[];
+  34  shellSort[];
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0034, 0005] (0047,         id) {shellSort}
@@ -761,7 +761,7 @@
           Lecr = epsilon
               [0034, 0015] (0034, closeBrack) {]}
               [0034, 0016] (0002,  semiColon) {;}
-0035  for[i = 0; i < n; 1]{
+  35  for[i = 0; i < n; 1]{
           BodyScope = Command BodyScope
           Command = 'reFor' '[' Atr ';' 'Eb' ';' Inc ']' Body
               [0035, 0005] (0042,      reFor) {for}
@@ -820,7 +820,7 @@
               [0035, 0024] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0035, 0025] (0037,  openBrace) {{}
-0036  print[vetor(i)] ;
+  36  print[vetor(i)] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0036, 0006] (0047,         id) {print}
@@ -851,7 +851,7 @@
           Lecr = epsilon
               [0036, 0020] (0034, closeBrack) {]}
               [0036, 0022] (0002,  semiColon) {;}
-0037  print[" "] ;
+  37  print[" "] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0037, 0009] (0047,         id) {print}
@@ -864,10 +864,10 @@
           Lecr = epsilon
               [0037, 0018] (0034, closeBrack) {]}
               [0037, 0020] (0002,  semiColon) {;}
-0038  }
+  38  }
           BodyScope = epsilon
               [0038, 0005] (0038, closeBrace) {}}
-0039  }
+  39  }
           BodyScope = epsilon
               [0039, 0001] (0038, closeBrace) {}}
           S = epsilon

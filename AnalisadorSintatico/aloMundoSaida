@@ -1,4 +1,4 @@
-0001  fun void main[] {
+   1  fun void main[] {
           S = funDec Type FunName '[' Params ']' Body S
               [0001, 0001] (0000,     funDec) {fun}
           Type = reVoid
@@ -10,7 +10,7 @@
               [0001, 0015] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0001, 0017] (0037,  openBrace) {{}
-0002  string message = "alo mundo" ;
+   2  string message = "alo mundo" ;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = stringType
@@ -25,7 +25,7 @@
               [0002, 0022] (0013, stringCons) {alo mundo}
           LIr = ';'
               [0002, 0034] (0002,  semiColon) {;}
-0003  print[message] ;
+   3  print[message] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0003, 0005] (0047,         id) {print}
@@ -52,7 +52,7 @@
           Lecr = epsilon
               [0003, 0018] (0034, closeBrack) {]}
               [0003, 0020] (0002,  semiColon) {;}
-0004  }
+   4  }
           BodyScope = epsilon
               [0004, 0001] (0038, closeBrace) {}}
           S = epsilon
