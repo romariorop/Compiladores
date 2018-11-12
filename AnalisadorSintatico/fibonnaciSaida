@@ -1,4 +1,4 @@
-1- fun void main[] {
+0001  fun void main[] {
           S = funDec Type FunName '[' Params ']' Body S
               [0001, 0001] (0000,     funDec) {fun}
           Type = reVoid
@@ -10,7 +10,7 @@
               [0001, 0015] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0001, 0017] (0037,  openBrace) {{}
-2- int n ;
+0002  int n ;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -21,7 +21,7 @@
           Inst = epsilon
           LIr = ';'
               [0002, 0008] (0002,  semiColon) {;}
-3- scan[n] ;
+0003  scan[n] ;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0003, 0005] (0047,         id) {scan}
@@ -48,7 +48,7 @@
           Lecr = epsilon
               [0003, 0011] (0034, closeBrack) {]}
               [0003, 0013] (0002,  semiColon) {;}
-4- int left = 0 ;
+0004  int left = 0 ;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -77,7 +77,7 @@
           Ebr = epsilon
           LIr = ';'
               [0004, 0018] (0002,  semiColon) {;}
-5- int right = 1;
+0005  int right = 1;
           BodyScope = Decl BodyScope
           Decl = Type LI
           Type = intType
@@ -106,7 +106,7 @@
           Ebr = epsilon
           LIr = ';'
               [0005, 0018] (0002,  semiColon) {;}
-6- if[n > 0]{
+0006  if[n > 0]{
           BodyScope = Command BodyScope
           Command = 'reIf' '[' Eb ']' Body Ifr
               [0006, 0005] (0040,       reIf) {if}
@@ -140,7 +140,7 @@
               [0006, 0013] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0006, 0014] (0037,  openBrace) {{}
-7- print[left];
+0007  print[left];
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0007, 0006] (0047,         id) {print}
@@ -167,10 +167,10 @@
           Lecr = epsilon
               [0007, 0016] (0034, closeBrack) {]}
               [0007, 0017] (0002,  semiColon) {;}
-8- }
+0008  }
           BodyScope = epsilon
               [0008, 0005] (0038, closeBrace) {}}
-9- if[n > 1]{
+0009  if[n > 1]{
           Ifr = epsilon
           BodyScope = Command BodyScope
           Command = 'reIf' '[' Eb ']' Body Ifr
@@ -205,7 +205,7 @@
               [0009, 0013] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0009, 0014] (0037,  openBrace) {{}
-10- print[right];
+0010  print[right];
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0010, 0006] (0047,         id) {print}
@@ -232,10 +232,10 @@
           Lecr = epsilon
               [0010, 0017] (0034, closeBrack) {]}
               [0010, 0018] (0002,  semiColon) {;}
-11- }
+0011  }
           BodyScope = epsilon
               [0011, 0005] (0038, closeBrace) {}}
-12- while[n > 2] {
+0012  while[n > 2] {
           Ifr = epsilon
           BodyScope = Command BodyScope
           Command = 'reWhile' '[' Eb ']' Body
@@ -270,17 +270,17 @@
               [0012, 0016] (0034, closeBrack) {]}
           Body = '{' BodyScope '}' 
               [0012, 0018] (0037,  openBrace) {{}
-13- n--;
+0013  n--;
           BodyScope = Atr BodyScope
           Atr = 'id' AtrR
               [0013, 0006] (0047,         id) {n}
           Atr = 'decreOp' ';' 
               [0013, 0007] (0032,    decreOp) {--}
               [0013, 0009] (0002,  semiColon) {;}
-14- }
+0014  }
           BodyScope = epsilon
               [0014, 0005] (0038, closeBrace) {}}
-15- }
+0015  }
           BodyScope = epsilon
               [0015, 0001] (0038, closeBrace) {}}
           S = epsilon

@@ -1,5 +1,6 @@
 #include <map>
 #include <iostream>
+#include <cstdio>
 #include <vector>
 #include <deque>
 #include <regex>
@@ -93,7 +94,7 @@ bool LexicalAnalyzer::hasToken(){
 		index = 0;
 		if(getline(infile, nextLine)){
 			while(nextLine[pos] == ' ' || nextLine[pos] == '\t')++pos;
-			if(pos < (int)nextLine.size())std::cout << line+1  << "- ";
+			if(pos < (int)nextLine.size())printf("%04d  ", line+1);
 			while(pos < (int)nextLine.size()){
 				std::cout << nextLine[pos];
 				++pos;
